@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Drum Kit</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="keys">
@@ -63,6 +62,61 @@
     <audio data-key="74" src="sounds/snare.wav"></audio>
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
+
+    <style>
+        html {
+            font-size: 10px;
+            background: url(https://source.unsplash.com/8e0EHPUx3Mo) bottom center;
+            background-size: cover;
+        }
+        
+        body,html {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        .keys {
+            display: flex;
+            flex: 1;
+            min-height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .key {
+            border: .4rem solid rgba(238, 238, 238, 0.794);
+            border-radius: .5rem;
+            margin: 1rem;
+            font-size: 1.5rem;
+            padding: 1rem .5rem;
+            transition: all .17s ease;
+            width: 10rem;
+            text-align: center;
+            color: white;
+            background: rgba(0,0,0,0.7);
+            text-shadow: 0 0 .5rem black;
+        }
+        
+        .playing {
+            transform: scale(1.23);
+            border-color: #ffc600;
+            box-shadow: 0 0 1rem #ffc600;
+        }
+        
+        kbd {
+            display: block;
+            font-size: 4rem;
+        }
+        
+        .sound {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: .1rem;
+            color: #ffc600;
+        }
+  
+    </style>
 
     <script>
         function playSound(e){
